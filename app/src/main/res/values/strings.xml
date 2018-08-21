@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name" translatable="false">MyTrainStation</string>
+    <string name="train_station_picture_content_description">Bild des Bahnhofes</string>
+    <string name="train_station_empty_list_text">Ihre Suche hat keine Ergebnisse geliefert.</string>
+    <string name="search_radius_text">Umkreis: %d km</string>
+    <string name="train_station_stepless_access_image_content_description">Der Bahnhof ist barrierefrei</string>
+    <string name="train_station_parking_image_content_description">Parkplätze sind vorhanden</string>
+    <string name="train_station_wifi_image_content_description">Wifi ist verfügbar</string>
+    <string name="saved_search_radius" translatable="false">SavedSearchRadiusKey</string>
+    <string name="last_location" translatable="false">LastLocationKey</string>
+    <string name="search_query" translatable="false">Suche nach %s</string>
+    <string name="train_station_location_provided">Standort verfügbar. Es wird nach Bahnhöfen in der Umgebung gesucht.</string>
+    <string name="train_station_action_bar_search">Suche nach Bahnhöfen</string>
+    <string name="app_settings">Einstellungen</string>
+    <string name="train_station_action_bar_search_hint">Standort</string>
+    <string name="search_radius_default_text">Umkreis: 0 km</string>
+    <string name="gps_location_display_text">Mein Standort</string>
+    <string name="gps_positioning_menu_item_text">GPS-Suche %s</string>
+    <string name="active">aktiv</string>
+    <string name="inactive">inaktiv</string>
+    <string name="gps_positioning_menu_item_default_text">GPS-Suche inaktiv</string>
+    <string name="gps_location_default_display_text">Kein Standort ermittelt</string>
+    <string name="prefs_gps_positioning_title">GPS-Suche</string>
+    <string name="prefs_display_settings_title">Anzeige</string>
+    <string name="prefs_min_time_between_location_updates_title">Minimale Zeitdauer zwischen Standort-Updates (in Millisekunden)</string>
+    <string name="prefs_min_time_between_location_updates_summary">Stellen Sie hier die Zeit in Millisekunden ein, die mindestens vergehen müssen bevor ein neuer Standort zur Suche verwendet werden soll.</string>
+    <string name="prefs_min_time_between_location_updates_default_value" translatable="false">10000</string>
+    <string name="prefs_display_settings_max_number_results_title">Maximale Anzahl von Bahnhöfen</string>
+    <string name="prefs_display_settings_max_number_results_summary">Legen Sie hier die maximale Anzahl von Bahnhöfen die Sie angezeigt bekommen möchten.</string>
+    <string name="prefs_display_settings_max_number_results_default_value" translatable="false">20</string>
+    <string name="prefs_min_distance_between_location_updates_title">Minimal Entfernung zwischen Standort-Updates (in Metern)</string>
+    <string name="prefs_min_distance_between_location_updates_summary">Stellen Sie hier die Entfernung in Metern ein, die mindestens zurückgelegt werden müssen bevor ein neuer Standort zur Suche verwendet werden soll.</string>
+    <string name="prefs_min_distance_between_location_updates_default_value" translatable="false">200</string>
+    <string name="web_view_embedded_image" translatable="false"><img src="%1$s" width="100%" />></string>
+</resources>

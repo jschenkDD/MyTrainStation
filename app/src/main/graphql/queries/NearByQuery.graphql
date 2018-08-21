@@ -1,0 +1,14 @@
+query NearByQuery($latitude: Float!, $longitude: Float!, $radius: Int!, $count: Int!) {
+    nearby(latitude: $latitude, longitude: $longitude, radius: $radius) {
+        stations(count: $count) {
+            primaryEvaId
+            name
+            hasWiFi
+            hasParking
+            hasSteplessAccess
+            picture {
+                url
+            }
+        }
+    }
+}

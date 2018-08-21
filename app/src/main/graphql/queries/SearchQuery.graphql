@@ -1,0 +1,14 @@
+query SearchQuery($searchTerm: String!) {
+    search(searchTerm: $searchTerm) {
+        stations {
+            primaryEvaId
+            name
+            hasWiFi
+            hasParking
+            hasSteplessAccess
+            picture {
+                url
+            }
+        }
+    }
+}

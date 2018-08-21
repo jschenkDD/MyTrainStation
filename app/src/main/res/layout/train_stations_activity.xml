@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lv_train_stations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical"/>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="@dimen/progress_indicator_width_height"
+        android:layout_height="@dimen/progress_indicator_width_height"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_train_station_empty_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lists_two_line_item_height"
+        android:layout_below="@+id/lv_train_stations"
+        android:paddingEnd="@dimen/lists_two_line_item_text_view_padding_left_right"
+        android:paddingStart="@dimen/lists_two_line_item_text_view_padding_left_right"
+        android:paddingTop="@dimen/lists_two_line_item_image_padding_top"
+        android:text="@string/train_station_empty_list_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="visible"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="pref_key_display"
+        android:title="@string/prefs_display_settings_title">
+
+        <EditTextPreference
+            android:defaultValue="@string/prefs_display_settings_max_number_results_default_value"
+            android:inputType="number"
+            android:key="pref_key_max_train_stations_displayed"
+            android:numeric="integer"
+            android:summary="@string/prefs_display_settings_max_number_results_summary"
+            android:title="@string/prefs_display_settings_max_number_results_title"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_gps_positioning"
+        android:title="@string/prefs_gps_positioning_title">
+
+        <EditTextPreference
+            android:defaultValue="@string/prefs_min_time_between_location_updates_default_value"
+            android:inputType="number"
+            android:key="pref_key_min_time_between_location_updates_millis"
+            android:numeric="integer"
+            android:summary="@string/prefs_min_time_between_location_updates_summary"
+            android:title="@string/prefs_min_time_between_location_updates_title"/>
+
+        <EditTextPreference
+            android:defaultValue="@string/prefs_min_distance_between_location_updates_default_value"
+            android:inputType="number"
+            android:key="pref_key_min_distance_between_location_updates_meter"
+            android:numeric="integer"
+            android:summary="@string/prefs_min_distance_between_location_updates_summary"
+            android:title="@string/prefs_min_distance_between_location_updates_title"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

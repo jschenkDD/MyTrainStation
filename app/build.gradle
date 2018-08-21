@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.apollographql.android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.mytrainstation"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    // use lifecycle features such as ViewModel within app
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    // use Room to use persistence data features
+    def room_version = "1.1.1"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
+    // We provide a modified log4j library (without the packages 'chainsaw' and 'lf5').
+    // This is required to avoid the new JUnit Android instrumentation test runner to be crashed.
+    implementation files('libs/log4j-1.2.17.jar')
+    // Some log4j is still not usable for Android. Fortunately we may hide this by the following dependency.
+    implementation 'de.mindpipe.android:android-logging-log4j:1.0.3'
+
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    // use apollo to handle graphql queries
+    implementation 'com.apollographql.apollo:apollo-runtime:0.4.1'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation('com.android.support.test:runner:1.0.2') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation('com.android.support.test:rules:1.0.2') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // We enable mockito by default
+    androidTestImplementation 'org.mockito:mockito-android:2.19.0'
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    implementation 'org.jetbrains:annotations:15.0'
+}

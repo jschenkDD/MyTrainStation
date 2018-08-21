@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lists_two_line_item_height">72dp</dimen>
+    <dimen name="lists_two_line_item_text_view_padding_left_right">16dp</dimen>
+    <dimen name="lists_two_line_item_image_view_padding_left_right">16dp</dimen>
+    <dimen name="lists_two_line_item_text_view_height">32dp</dimen>
+    <dimen name="lists_two_line_item_image_padding_top">8dp</dimen>
+    <dimen name="lists_padding">8dp</dimen>
+    <dimen name="lists_two_line_item_image_width">100dp</dimen>
+    <dimen name="lists_two_line_item_image_height">56dp</dimen>
+    <dimen name="lists_two_line_item_meta_data_width">24dp</dimen>
+    <dimen name="progress_indicator_width_height">48dp</dimen>
+</resources>

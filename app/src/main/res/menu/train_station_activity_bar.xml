@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/train_station_action_bar_search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/gps_positioning"
+        android:checkable="true"
+        android:enabled="false"
+        android:title="@string/gps_positioning_menu_item_default_text"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/app_settings"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/app_settings"
+        app:showAsAction="withText"/>
+</menu>
