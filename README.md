@@ -10,5 +10,7 @@ Alternative you could use search term to find stations you are interested in.
 - Show SnackBar if user denied permission
 - load images of stations via AsyncTask and store them as blob in database (for example second table called `resource_table`) and 
 link them as foreign key in existing table `train_stations`
-- add `About` entry within app settings to show general information about the app
+- add `About` entry within app settings to show general information about the app and licences
 - think about using Dependency Injection (Dagger2)
+- add ViewModelTests
+- check Queries on graphlql endpoint because it seems to be tricky to limit stations by settings count variable (sometimes get 'Internal Error' response)
