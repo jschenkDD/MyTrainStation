@@ -2,14 +2,14 @@ language: android
 jdk: oraclejdk8
 
 before_cache:
- -rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
- -rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+ - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+ - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
  directories:
- -$HOME/.gradle/caches/
- -$HOME/.gradle/wrapper/
- -$HOME/.android/build-cache
+ - $HOME/.gradle/caches/
+ - $HOME/.gradle/wrapper/
+ - $HOME/.android/build-cache
 
 env:
  global:
@@ -23,17 +23,17 @@ android:
   - platform-tools
   - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943
   # The BuildTools version used by your project
-  - build-tools-$ANDROID_BUILD_TOOLS
+  - build-tools-${ANDROID_BUILD_TOOLS}
   # The SDK version used to compile project
-  - android-$EMULATOR_API
+  - android-${EMULATOR_API}
   # The SDK version used to compile project
-  - android-$ANDROID_API
+  - android-${ANDROID_API}
   # run emulator to use during tests
-  - sys-img-armeabi-v7a-android-$EMULATOR_API
+  - sys-img-armeabi-v7a-android-${EMULATOR_API}
 
 before_script:
  # Create and start emulator
- - echo no | android create avd --force -n test -t android-$EMULATOR_API --abi armeabi-v7a
+ - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
  - emulator -avd test -no-skin -no-audio -no-window &
  - android-wait-for-emulator
  - adb shell input keyevent 82 &
