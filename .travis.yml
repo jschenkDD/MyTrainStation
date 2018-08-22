@@ -32,6 +32,9 @@ android:
   # run emulator to use during tests
   - sys-img-armeabi-v7a-android-${EMULATOR_API}
 
+before_install:
+ - yes | sdkmanager "platforms;android-26" # see issue https://github.com/travis-ci/travis-ci/issues/8874
+
 before_script:
  # Create and start emulator
  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
