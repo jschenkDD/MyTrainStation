@@ -1,8 +1,10 @@
 package com.mytrainstation.ui;
 
+import android.Manifest;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
+import android.support.test.rule.GrantPermissionRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.mytrainstation.R;
@@ -44,6 +46,10 @@ public class TrainStationsActivityTest {
 	public ActivityTestRule<TrainStationsActivity> mActivityRule = new ActivityTestRule<>(
 			TrainStationsActivity.class, false, true);
 
+	@Rule
+	public GrantPermissionRule mRuntimePermissionRule = GrantPermissionRule.grant(Manifest
+			.permission.ACCESS_FINE_LOCATION);
+
 	/**
 	 * Set up test environment. Will fill {@link #mViewModel} and {@link #mActivity} so that they
 	 * could be used directly within test methods.
@@ -61,7 +67,7 @@ public class TrainStationsActivityTest {
 	 */
 	@Test
 	public void TrainStationViewModel_searchRadiusChanged_willShowSearchRadiusWithinHeader() {
-		mActivity.runOnUiThread(() -> mViewModel.setSearchRadius(10));
+		mActivity.runOnUiThread(() -> mViewModel.setSearchRadius(10000));
 		String expectedText = mActivity.getString(R.string.search_radius_text, 10);
 		InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 		onView(withId(R.id.tv_search_radius)).check(matches(withText(expectedText)));
